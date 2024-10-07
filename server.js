@@ -16,9 +16,10 @@ app.post('/whatsapp', (req, res) => {
     const message = twiml.message();
     message.body('Aquí está tu imagen:');
     message.media('https://i.pinimg.com/236x/fc/6c/c7/fc6cc728c419dc21c05a36a9d06a93be.jpg'); // Cambia la URL a la de tu imagen
-  } else {
-    twiml.message('Escribe "imagen" para recibir una imagen.');
-  }
+  } 
+  // else {
+  //   twiml.message('Escribe "imagen" para recibir una imagen.');
+  // }
 
   res.writeHead(200, { 'Content-Type': 'text/xml' });
   res.end(twiml.toString());
